@@ -70,6 +70,11 @@ app.get('/wallet/address', (req, res) => {
   }
 })
 
+app.get('/', (req, res) => {
+  res.send('Hey this is my API running 🥳')
+})
+
+
 app.listen(port, () => {
   console.log(`App listening on port ${port}`)
 })
