@@ -1,0 +1,19 @@
+{
+  "name": "bitcoin_xpub_transform",
+  "version": "1.0.0",
+  "description": "Bitcoin Extended Public Key Address Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mchalise",
+  "license": "ISC",
+  "dependencies": {
+    "bip32": "^3.0.1",
+    "bitcoinjs-lib": "^6.1.0",
+    "bs58check": "^2.1.2",
+    "coininfo": "^5.2.1",
+    "express": "^4.18.2",
+    "tiny-secp256k1": "^2.2.1"
+  }
+}
