@@ -1,9 +1,9 @@
 const express = require('express')
+const serverless = require('serverless-http');
 const app = express()
 const port = 3000
 const xpubConverter = require('./core.js')
 const { getAddressBIP44, getAddressBIP49, getAddressBIP84 } = require('./bitcoin.js')
-
 
 /* 
  @request wallet/keys?secret=..&addr=xpub6Brj1doPB...
@@ -79,7 +79,8 @@ app.listen(port, () => {
   console.log(`App listening on port ${port}`)
 })
 
-module.exports = app;
+exports.handler = serverless(app);
+
 
 
 
