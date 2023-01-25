@@ -5,16 +5,16 @@ const port = 3000
 const xpubConverter = require('./core.js')
 const { getAddressBIP44, getAddressBIP49, getAddressBIP84 } = require('./bitcoin.js')
 
-/* 
+/*
  @request wallet/keys?secret=..&addr=xpub6Brj1doPB...
- 
+
  @response
  {
   "xpub": "xpub6Brj1doPBv...",
   "ypub": "ypubxvbgSspTkk...",
   "zpub": "zpub1CdyvHigYq..."
  }
-*/ 
+*/
 app.get('/wallet/keys', (req, res) => {
   if (req.query.code !== 'mc-1a2b3c4d0'){
     res.send('You donot have access to this endpoint')
@@ -28,9 +28,9 @@ app.get('/wallet/keys', (req, res) => {
   }
 })
 
-/* 
+/*
  @request wallet/keys?count=20&secret=..&addr=xpub6Brj1doPB...
- 
+
  @response
   {
     "bip44": {
@@ -46,7 +46,7 @@ app.get('/wallet/keys', (req, res) => {
       "change_address":["bc1q00aeu7..."]
     }
   }
-*/ 
+*/
 
 app.get('/wallet/address', (req, res) => {
   if (req.query.code !== 'mc-1a2b3c4d0'){

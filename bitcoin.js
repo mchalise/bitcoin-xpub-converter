@@ -1,8 +1,8 @@
 const bitcoin = require("bitcoinjs-lib"); 
-const ecc = require('tiny-secp256k1')
-const { BIP32Factory } = require('bip32')
-const bip32 = BIP32Factory(ecc)
-const xpubConverter = require('./core.js')
+const ecc = require('tiny-secp256k1');
+const { BIP32Factory } = require('bip32');
+const bip32 = BIP32Factory(ecc);
+const xpubConverter = require('./core.js');
 
 // 
 // BIP44 Legacy Addr (Addr starting with 1) xPub
