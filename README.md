@@ -10,7 +10,7 @@
 
 ```
 
- @request wallet/keys?addr=xpub6Brj1doPB...&code=..
+ @request wallet/keys?addr=xpub6Brj1doPB...
 
  @response
  {
@@ -22,7 +22,7 @@
 2. Convert any extended key provided into all 3 types of addresses. (BEP44, BEP49, BEP84)
 ```
 
- @request wallet/keys?addr=xpub6Brj1doPB...&count=20&secret=..
+ @request wallet/keys?addr=xpub6Brj1doPB...&count=20
 
  @response
   {
