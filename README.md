@@ -1,6 +1,6 @@
 # Extended Public Key Address Generator
 
-*This is a simple micro serive to convert any extended key and to any type of address associated with Bitcoin Chain.( BTC, LTC, BCH, DASH)*
+*This is a simple micro service to convert any extended key and to any type of address associated with Bitcoin Chain.( BTC, LTC, BCH, DASH)*
 
 
 
