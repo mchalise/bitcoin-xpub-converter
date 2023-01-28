@@ -16,16 +16,12 @@ const { getAddressBIP44, getAddressBIP49, getAddressBIP84 } = require('./bitcoin
  }
 */
 app.get('/wallet/keys', (req, res) => {
-  if (req.query.code !== 'mc-1a2b3c4d0'){
-    res.send('You donot have access to this endpoint')
-  }else{
     let addr = req.query.addr
     res.json({
       xpub: xpubConverter(addr, 'xpub'),
       ypub: xpubConverter(addr, 'ypub'),
       zpub: xpubConverter(addr, 'zpub')
     })
-  }
 })
 
 /*
@@ -49,9 +45,6 @@ app.get('/wallet/keys', (req, res) => {
 */
 
 app.get('/wallet/address', (req, res) => {
-  if (req.query.code !== 'mc-1a2b3c4d0'){
-    res.send('You donot have access to this endpoint')
-  }else{
     let addr = req.query.addr
     let totalAddrCount = req.query.count || 10
     if(!isNaN(totalAddrCount) && totalAddrCount < 200){
@@ -67,7 +60,6 @@ app.get('/wallet/address', (req, res) => {
     }else{
       res.send('Invalid address count provided')
     }
-  }
 })
 
 app.get('/', (req, res) => {
